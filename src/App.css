@@ -1,33 +1,485 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  /*border: solid 1px red;*/
+}
+.App{
+  background-color: #f3f3f4;
+  padding: 20px;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+header{
+  display: flex;
+  flex-direction: column;
+  margin: 0px -5px;
+  justify-content: space-evenly;
+}
+.cardMeasure{
+  background-color: white;
+  margin: 5%;
+  width: 90%;
+  height: 90px;
+}
+.cardMessage{
+  border-bottom: solid 2px #f3f3f4;
+  padding: 5px;
+}
+.cardMessage:hover{
+  cursor: pointer;
+  background-color: #f3f3f4;
+}
+.cardMessage h6{
+  margin: 0;
+}
+.messagePlace{
+  margin: 0;
+  height: 50px;
+  overflow: hidden;
+  font-size: 10px;
+  position: relative;
+}
+.messagePlace:after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 33px;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(255,255,255,0);
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.64) 47%, rgba(255,255,255,1) 74%, rgba(255,255,255,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(47%, rgba(255,255,255,0.64)), color-stop(74%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.64) 47%, rgba(255,255,255,1) 74%, rgba(255,255,255,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.64) 47%, rgba(255,255,255,1) 74%, rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.64) 47%, rgba(255,255,255,1) 74%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.64) 47%, rgba(255,255,255,1) 74%, rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+}
+.datePlace{
+  margin: 0;
+  font-size: 10px;
+}
+.orders {
+  margin: 31px -20px;
+  background-color: white;
+  height: 1460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ordersImg{
+  transform: rotate(90deg);
+  margin: 12px;
+}
+.tabOrder{
+  width: 100%;
+  height: 200px;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+}
+.wrapListing{
+  background-color: white;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  border-bottom: solid 25px white;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.headerWL{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 2px #eef0f1;
+  background-color: white;
+  padding: 5px 10px;
+  height: 26px;
+}
+.headerWL h6{
+  align-self: center;
+}
+.headerWL img{
+  align-self: center;
+  width: 57px;
+  height: 14px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.right{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.line1 {
+  width: 90%;
+  margin: 60px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.line2{
+  width: 90%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+.userProjectList, .smallTodoList, .transactionsWorldwide{
+  width: 100%;
+  height: 200px;
+  margin-top: 40px;
+}
+.map {
+  width: 100%;
+  height: 200px;
+  margin-top: 40px;
+}
+.map img {
+  margin-top: -14px;
+  width: 100%;
+}
+.envelopeImg{
+  width: 18px;
+  margin: 10px;
+  float: left;
+}
+.messagesNumber .title{
+  font-size: 22px;
+  color: #aeb0b1;
+  margin: 2px 0px -10px 0px;
+}
+.messagesNumber .numberPlace{
+  font-size: 11px;
+  color: #aeb0b1;
+  margin: 15px 0px 11px 17px;
+}
+.messagesWrap{
+  height: 400px;
+  width: 90%;
+  align-self: center;
+}
+.tabOrderWrap {
+  background-color: white;
+
+}
+.checkbox{
+  width: 90%;
+  margin-top: 5px;
+  background-color: #f3f3f4;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.checkbox input{
+background-color: white;
+  margin: 5px;
+}
+.labelCHB{
+  text-transform: capitalize ;
+  margin: 3px;
+  font-size: 10px;
+}
+.todoPlace {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.true{
+  text-decoration: line-through ;
+}
+.progressBody {
+  width: 100%;
+  height: 6px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+}
+.progressValue{
+  background-color: #1ab394;
+  height: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+.textLine{
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.textLine div{
+  font-size: 19px;
+}
+.diagramPlace{
+  width: 80%;
+}
+.tabOrderWrap .value{
+  color: #aeb0b1;
+  font-size: 20px;
+  margin: 0px 0px -13px 0px;
+}
+.tabOrder{
+  align-self: center;
+  width: 100%;
+  /*height: 200px;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.threeBtn {
+  display: flex;
+  width: 90%;
+  justify-content: flex-end;
+  margin: 5px;
+}
+.cardMeasure{
+  border-top: solid 3px #e7eaec;
+  display: flex;
+  flex-direction: column;
+}
+.measureHeader{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  height: 30px;
+  align-items: center;
+  border-bottom: solid 1px #e7eaec;
+}
+.measureTitle{
+  margin: 0;
+}
+.table {
+  width: 86%;
+}
+.transactionsPlace{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.measureBtn{
+  font-size: 10px;
   color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  height: min-content;
 }
-
-.App-link {
-  color: #61dafb;
+.measureValue{
+  color: #aeb0b1;
+  margin: 3px 15px -9px;
 }
+.measureFooter{
+  margin: 0px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.measurePercentPlace{
+ margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tableHeader{
+  margin: 0px 5px 0px 5px;
+  display: flex;
+  height: 25px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 2px #e7eaec;
+}
+.projectFieldTitle{
+  text-align: center;
+  margin: 0;
+  width: 25%;
+}
+.projectRow{
+  width: 100%;
+  margin: 0px 0px 0px 20px;
+  display: flex;
+  height: 25px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #e7eaec;
+  font-size: 10px;
+}
+.projectRow>div{
+  width: 25%;
+}
+.status{
+  height: 20px;
+  border-radius: 3px;
+  padding: 3px;
 
-@keyframes App-logo-spin {
-  from {
+}
+.projDatePlace, .projectPercent{
+  display: flex;
+}
+.projectPercent .value{
+  color: #1ab394;
+  margin: 0;
+}
+.projectPercent img{
+  width: 14px;
+  height: 14px;
+  margin: 0;
+}
+.amount {
+  text-align: center;
+}
+/*********************************************1*************************************************/
+@media (min-width : 415px) and (max-width : 870px) {
+
+  header{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .cardMeasure {
+    margin: 10px;
+    width: 248px;
+    height: 144px;
+  }
+  .orders{
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+  }
+  .ordersImg{
     transform: rotate(0deg);
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .ordersImg img{
+    width: 100%;
+  }
+  .tabOrderWrap {
+    margin: auto;
+    width: 90%;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .messages{
+    height: 500px;
+  }
+  .right{
+    width: 100%;
+    margin: auto;
+  }
+  .line1{
+    display: flex;
+    flex-direction: row;
+  }
+  .userProjectList, .smallTodoList, .transactionsWorldwide, .map {
+    width: 100%;
+    height: 200px;
+    background-color: white;
+  }
+  .map img{
+    width: 100%;
+  }
+  .messagesWrap{
+    width: 90%;
   }
 }
+.transactionsWorldwide .wrapListing{
+  overflow: initial;
+}
+
+/********************************************2**************************************************/
+@media only screen  and (min-width : 871px)  {
+  .App{
+    margin: auto;
+    width: 950px;
+  }
+  header{
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .cardMeasure{
+    margin: 10px;
+    width: 200px;
+    height: unset;
+  }
+  .orders{
+    margin: unset;
+    height: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .ordersImg{
+    transform: rotate(0deg);
+    width: 100%;
+    align-self: center;
+  }
+  .ordersImg img{
+    width: 100%;
+
+  }
+  .tabOrder{
+    width: 272px;
+    height: 200px;
+  }
+  footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .messages{
+    height: 500px;
+  }
+  .right{
+    width: 66%;
+    margin-top: -32px;
+  }
+  .line1, .line2{
+    width: 100%;
+    margin: 0px 0 37px 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .userProjectList, .smallTodoList{
+    width: 49%;
+    height: 200px;
+  }
+  .transactionsWorldwide{
+    width: 100%;
+    height: 200px;
+  }
+  .messagesWrap{
+    width: 33%;
+    margin-top: -93px;
+    height: 411px;
+  }
+  .wrapListing{
+    display: flex;
+  }
+
+  .cardProject {
+    width: 100%;
+  }
+  .transactionsPlace{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  .map {
+    width: 365px;
+
+  }
+}
+
+

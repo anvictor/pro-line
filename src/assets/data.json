@@ -1,0 +1,37 @@
+{
+  "projects": {
+    "title":["Status", "Date", "User", "Value"],
+    "listing": [
+      {"id": 1, "status": "Pending...", "date": "11:20pm", "user": "Samantha", "value": "24%", "picture": "enterUpSideDown"},
+      {"id": 2, "status": "Canceled", "date": "10:40am", "user": "Monica", "value": "66%", "picture": "enterUpSideDown"},
+      {"id": 3, "status": "Pending...", "date": "01:30pm", "user": "John", "value": "54%", "picture": "enterUpSideDown"},
+      {"id": 4, "status": "Pending...", "date": "02:20pm", "user": "Agnes", "value": "12%", "picture": "enterUpSideDown"},
+      {"id": 5, "status": "Completed", "date": "04:10am", "user": "Amelia", "value": "66%", "picture": "enterUpSideDown"},
+      {"id": 6, "status": "Pending...", "date": "12:08pm", "user": "Damian", "value": "23%", "picture": "enterUpSideDown"}
+  ]},
+  "measures": [
+    { "id": 1, "title": "Income", "period": "Monthly", "value": "40 886,200",
+      "text": "Total income", "picture": "blueFlash", "percent": "98%"},
+    { "id": 2, "title": "Orders", "period": "Annual", "value": "275,800",
+      "text": "New Orders", "picture": "enterUpSideDown", "percent": "20%"},
+    { "id": 3, "title": "Visits", "period": "Today", "value": "106,120",
+      "text": "New visits", "picture": "enterUpSideDown", "percent": "44%"},
+    { "id": 4, "title": "User activity", "period": "Low value", "value": "80,600",
+      "text": "in first month", "picture": "enterRed", "percent": "38%"}
+  ],
+  "diagrams": [
+    { "id": 1, "value": "2,346", "text": "Total orders in period", "picture": "enterUpSideDown", "percent": 48},
+    { "id": 2, "value": "4,422", "text": "Orders in last month", "picture": "enterGreen", "percent": 60},
+    { "id": 3, "value": "9,180", "text": "Monthly income from orders", "picture": "greenFlash", "percent": 48}
+  ],
+  "transactions": {
+    "title":["No", "Transaction", "Date", "Amount"],
+    "listing": [
+      {"no": 1, "transaction": "Security doors", "date": "16 jun 2014", "amount": "$483.00", "color": "#1ab394"},
+      {"no": 2, "transaction": "Wardrobes", "date": "10 jun 2014", "amount": "$327.00", "color": "#1ab394"},
+      {"no": 3, "transaction": "Set of tools", "date": "12 jun 2014", "amount": "$125.00", "color": "#f8ac59"},
+      {"no": 4, "transaction": "Panoramic pictures", "date": "22 jun 2013", "amount": "$344.00", "color": "#1ab394"},
+      {"no": 5, "transaction": "Phones", "date": "24 jun 2013", "amount": "$235.00", "color": "#1ab394"},
+      {"no": 6, "transaction": "Monitors", "date": "26 jun 2013", "amount": "$100.00", "color": "#1ab394"}
+    ]}
+}
